@@ -93,6 +93,7 @@ export const CartProvider = ({ children }: IProvidersProps) => {
         valueToCart,
         getProduct,
         setSeachProduct,
+        loadProducts,
       }}
     >
       {children}

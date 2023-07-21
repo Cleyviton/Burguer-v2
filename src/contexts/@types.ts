@@ -53,4 +53,5 @@ export interface ICartContext {
   valueToCart: number;
   getProduct: IProducts[];
   setSeachProduct: React.Dispatch<React.SetStateAction<string>>;
+  loadProducts: () => Promise<void>;
 }

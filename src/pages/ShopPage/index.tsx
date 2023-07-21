@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { StyledShopPage } from './style';
 import CartModal from '../../components/CartModal';
 import Header from '../../components/Header';
@@ -7,7 +7,11 @@ import { StyledContainer } from '../../styles/grid';
 import { CartContext } from '../../contexts/CartContext';
 
 const ShopPage = () => {
-  const { isOpenModal } = useContext(CartContext);
+  const { isOpenModal, loadProducts } = useContext(CartContext);
+
+  useEffect(() => {
+    loadProducts();
+  }, []);
 
   return (
     <StyledShopPage>
